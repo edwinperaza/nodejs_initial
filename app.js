@@ -9,5 +9,9 @@ app.get("/",function(req, res){
   // File index.pug must be saved at "views"
   res.render('index.pug', { title : "My first webpage with express and pug", message: "Hello world!!!"});
 })
+
+app.post("/", function(req, res){
+  res.render("index", { title : "My first POST with express and pug", message: "Hello POST world!!!"})
+})
 //Set port where our server will be listening
 app.listen(8080);
